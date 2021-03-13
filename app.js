@@ -7,9 +7,11 @@ app.use(cors());
 app.use(express.json());
 
 const projectRoute = require('./routes/project');
+const taskRoute = require('./routes/task');
 const projectLogRoute = require('./routes/project_log');
 
 app.use('/project', projectRoute);
+app.use('/task', taskRoute);
 app.use('/log', projectLogRoute);
 
 app.get('/', (req, res) => {
